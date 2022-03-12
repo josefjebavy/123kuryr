@@ -28,5 +28,13 @@ var_dump($request);
 $response = $request->send();
 var_dump($response);
 */
+$body=$request->getBody();
 echo"------------\n";
-var_dump($request->getBody()."");
+var_dump($body."");
+
+echo"------------\n";
+
+var_dump(json_decode($body));
+echo"#############";
+
+var_dump(json_decode($body)->$order2->history[0]->id);
